@@ -16,11 +16,13 @@
         <ul class="nav navbar-nav">
           <li><%= link_to 'Accueil', root_path %></li>
           <li><%= link_to 'Contact', static_pages_contact_path %></li>
-          <li><%= link_to 'Je réserve', '#' %></li>
+          <li><%= link_to 'Pins', pins_path %></li>
+          <li><%= link_to 'New pin', new_pin_path %></li>
+
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <% if current_user %>
-            <li><%= link_to " #{current_user.firstname.titleize} #{current_user.lastname.titleize}", user_path(current_user), class: 'glyphicon glyphicon-user' %></li>
+            <li><%= link_to current_user.email, current_user, class: 'glyphicon glyphicon-user' %></li>
             <li><%= link_to "logout", logout_path %></li>
           <% end %>
         </ul>

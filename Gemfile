@@ -25,6 +25,9 @@ gem 'jt-rails-generator-user', '~> 1.0'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'sass-rails', '>= 3.2'
 
+
+gem 'formtastic-bootstrap'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

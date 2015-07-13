@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'logout' => 'sessions#destroy', as: :logout
 
   get 'signup' => 'users#new', as: :signup
-  resources :users, only: [:new, :create] do
+  resources :users, only: [:show, :new, :create] do
 
     collection do
       get 'password_forgot' => 'users#password_forgot', as: :password_forgot
@@ -17,6 +17,9 @@ Rails.application.routes.draw do
       get 'reset_password/:token' => 'users#reset_password', as: :reset_password
     end
   end
+
+  resources :pins
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
