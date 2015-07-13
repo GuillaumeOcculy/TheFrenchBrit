@@ -1,8 +1,17 @@
-<%= form_tag login_path do %>
+<h1 class='text-center'>Login</h1>
 
-	<%= text_field_tag :email, params[:email] %>
-	<%= password_field_tag :password %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+		<%= form_tag login_path do %>
 
-	<%= submit_tag 'Login' %>
+			<%= text_field_tag :email, params[:email], class: 'form-control' %>
+			<%= password_field_tag :password, '', class: 'form-control' %>
 
-<% end %>
+			<div class="row text-center">
+				<%= submit_tag 'Login', class: 'btn btn-lg btn-primary' %>
+			</div>
+
+
+		<% end %>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<%= semantic_form_for @user do |f| %>
+  <%= f.semantic_errors %>
+
+  <%= f.inputs do %>
+    <%= f.input :firstname, input_html: {placeholder: 'John'} %>
+    <%= f.input :lastname,  input_html: {placeholder: 'Doe'} %>
+    <%= f.input :email, as: :email, input_html: {placeholder: 'john@doe.com'} %>
+  	<%= f.input :password %>
+  <% end %>
+
+  <div class="row text-center">
+    <%= f.actions do %>
+      <%= f.submit 'Submit', class: 'btn btn-lg btn-primary' %>
+    <% end %>
+  </div>
+
+<% end %>

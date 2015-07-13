@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
 
-	before_action :require_no_user
+	before_action :require_no_user, only: [:new, :create]
+
+	def index
+		@users = User.all
+	end
 
 	def new
 		@user = User.new
@@ -44,7 +48,7 @@ class UsersController < ApplicationController
 private
 
 	def user_params
-		params.require(:user).permit(:email, :password)
+		params.require(:user).permit(:firstname, :lastname, :email, :password)
 	end
 
 end

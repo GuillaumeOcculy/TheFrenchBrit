@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'logout' => 'sessions#destroy', as: :logout
 
   get 'signup' => 'users#new', as: :signup
-  resources :users, only: [:show, :new, :create] do
+  resources :users do
 
     collection do
       get 'password_forgot' => 'users#password_forgot', as: :password_forgot
