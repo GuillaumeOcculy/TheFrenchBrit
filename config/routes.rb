@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   get 'logout' => 'sessions#destroy', as: :logout
 
+  get 'signup' => 'users#new', as: :signup
   resources :users, only: [:new, :create] do
 
     collection do

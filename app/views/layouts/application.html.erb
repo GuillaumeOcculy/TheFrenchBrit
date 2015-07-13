@@ -8,7 +8,14 @@
 </head>
 <body>
 
-<%= yield %>
+  <%= render "layouts/header" %>
+    <% flash.each do |key, value| %>
+      <h3 class="text-center"><%= content_tag(:div, value, class: "alert alert-#{key}") %></h3>
+    <% end %>
+  <%= yield %>
+  <%= render "layouts/footer" %>
 
+  
+  <%= debug(params) if Rails.env.development? %>
 </body>
 </html>
