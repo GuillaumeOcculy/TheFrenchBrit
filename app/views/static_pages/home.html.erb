@@ -13,15 +13,18 @@ THE FRENCH BRIT is an exciting new concept that combines innovation with experie
 <p> <%= link_to 'Check on IMDB', "http://www.imdb.com/name/nm0074323/", target: '_blank' %> </p>
 
 <h2 class='text-center'>Castings</h2>
-<div class="row">
+
+<div class="row text-center">
   <% @pins.each do |pin| %>
     <div class="col-xs-6 col-md-6">
       <h2 class='text-center'><%= link_to pin.title, pin %></h2>
       <% if pin.is_video? %>
         <iframe width="560" height="315" class="embed-responsive-item" src= <%= pin.video_reference %> ></iframe>
       <% else %>
+        <%= image_tag pin.avatar.url(:medium) %>
       <% end %>
     </div>
   <% end %>
 </div>
-<h3>The French Brit likes </h3>
+
+<h2 class='text-center'>The French Brit Likes </h2>

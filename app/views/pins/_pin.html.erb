@@ -3,6 +3,7 @@
   <% if pin.is_video? %>
     <iframe width="560" height="315" class="embed-responsive-item" src= <%= pin.video_reference %> ></iframe>
   <% else %>
+    <div class="text-center"><%= image_tag pin.avatar.url(:medium) %></div>
   <% end %>
   <%= simple_format pin.description %>
 </div>

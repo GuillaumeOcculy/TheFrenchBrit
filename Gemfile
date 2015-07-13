@@ -28,6 +28,9 @@ gem 'sass-rails', '>= 3.2'
 
 gem 'formtastic-bootstrap'
 
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
