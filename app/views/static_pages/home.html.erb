@@ -1,21 +1,27 @@
-<div class="container">
+<h1 class='text-center'>THE FRENCH BRIT</h1>
+<p>The International Casting & Coaching company</p>
 
-  <h1 class='text-center'>THE FRENCH BRIT</h1>
-  <p>The International Casting & Coaching company</p>
+<p>
+Bienvenue!
+Because we're English and we live in France,
 
-  <p>
-  Bienvenue!
-  Because we're English and we live in France,
+because in the 15 years we've been doing business  we've had the privilege to work with the best,
 
-  because in the 15 years we've been doing business  we've had the privilege to work with the best,
+THE FRENCH BRIT is an exciting new concept that combines innovation with experience to bridge that age-old gap between our two nations
+</p>
 
-  THE FRENCH BRIT is an exciting new concept that combines innovation with experience to bridge that age-old gap between our two nations
-  </p>
+<p> <%= link_to 'Check on IMDB', "http://www.imdb.com/name/nm0074323/", target: '_blank' %> </p>
 
-  <p> <%= link_to 'Check on IMDB', "http://www.imdb.com/name/nm0074323/", target: '_blank' %> </p>
-
-  <h2>Les videos</h2>
-  
-  <h3>The French Brit likes </h3>
-
+<h2 class='text-center'>Castings</h2>
+<div class="row">
+  <% @pins.each do |pin| %>
+    <div class="col-xs-6 col-md-6">
+      <h2 class='text-center'><%= link_to pin.title, pin %></h2>
+      <% if pin.is_video? %>
+        <iframe width="560" height="315" class="embed-responsive-item" src= <%= pin.video_reference %> ></iframe>
+      <% else %>
+      <% end %>
+    </div>
+  <% end %>
 </div>
+<h3>The French Brit likes </h3>

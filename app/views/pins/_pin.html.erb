@@ -1,0 +1,8 @@
+<div class="col-xs-6 col-md-6">
+  <h2 class='text-center'><%= link_to pin.title, pin %></h2>
+  <% if pin.is_video? %>
+    <iframe width="560" height="315" class="embed-responsive-item" src= <%= pin.video_reference %> ></iframe>
+  <% else %>
+  <% end %>
+  <%= simple_format pin.description %>
+</div>
