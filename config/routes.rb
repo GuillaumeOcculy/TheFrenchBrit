@@ -1,20 +1,26 @@
 Rails.application.routes.draw do
+  get 'static_pages/home'
+
+  get 'static_pages/contact'
+
   get 'login' => 'sessions#new', as: :login
   post 'login' => 'sessions#create'
   get 'logout' => 'sessions#destroy', as: :logout
-  resources :users, only: [:new, :create] do
-  collection do
-    get 'password_forgot' => 'users#password_forgot', as: :password_forgot
-    post 'password_forgot' => 'users#password_forgot'
 
-    get 'reset_password/:token' => 'users#reset_password', as: :reset_password
+  resources :users, only: [:new, :create] do
+
+    collection do
+      get 'password_forgot' => 'users#password_forgot', as: :password_forgot
+      post 'password_forgot' => 'users#password_forgot'
+
+      get 'reset_password/:token' => 'users#reset_password', as: :reset_password
+    end
   end
-end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'static_pages#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
