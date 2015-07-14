@@ -1,0 +1,11 @@
+<h1 class='text-center'> Message of <%= @contact.name %> </h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= simple_format @contact.message %>
+    <p>Email: <%= @contact.email %></p>
+    <% if @contact.phone %>
+      <p>Phone: <% @contact.phone %></p>
+    <% end %>
+  </div>
+</div>

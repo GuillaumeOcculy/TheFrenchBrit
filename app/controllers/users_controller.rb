@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 			redirect_to root_url, flash: {success: 'User account created !'}
 		else
 			render :new
-			flash[:danger] = 'User has not been created !'
+			flash[:warning] = 'User has not been created !'
 		end
 	end
 
@@ -33,7 +33,7 @@ class UsersController < ApplicationController
 			redirect_to root_url, flash: {success: 'User account updated !'}
 		else
 			render :edit
-			flash[:danger] = 'User has not been updated !'
+			flash[:warning] = 'User has not been updated !'
 		end
 	end
 

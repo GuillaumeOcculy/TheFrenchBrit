@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
 			redirect_to root_url, flash: {success: 'You are logged in !'}
 		else
 			render :new
-			flash[:danger] = 'You are not been logged in !'
+			flash[:warning] = 'You are not been logged in !'
 		end
 	end
 

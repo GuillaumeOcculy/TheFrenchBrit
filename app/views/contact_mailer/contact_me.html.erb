@@ -11,6 +11,8 @@
     <p>
       Email: <%= @message.email %>
     </p>
-    <p>Phone number: <%= @message.phone %> </p>
+    <% if @message.phone %>
+      <p>Phone number: <%= @message.phone %> </p>
+    <% end %>
   </body>
 </html>

@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
   # Contacts
-  resources :contacts, only: [:new, :create, :index]
-  get 'contact' => 'contacts#new'
+  resources :contacts, only: [:show, :new, :create, :index]
+  get 'contact_us' => 'contacts#new'
 
   # Sessions
   get 'login' => 'sessions#new', as: :login

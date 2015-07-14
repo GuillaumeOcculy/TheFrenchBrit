@@ -18,7 +18,7 @@ class PartnersController < ApplicationController
       redirect_to @partner, flash: {success: 'Partner has been created !'}
     else
       render :new
-      flash[:danger] = 'Partner created !'
+      flash[:warning] = 'Partner created !'
     end
   end
 
@@ -30,7 +30,7 @@ class PartnersController < ApplicationController
       redirect_to @partner, flash: {success: 'Partner has been updated !'}
     else
       render :edit
-      flash[:danger] = 'Partner has not been updated !'
+      flash[:warning] = 'Partner has not been updated !'
     end
   end
 

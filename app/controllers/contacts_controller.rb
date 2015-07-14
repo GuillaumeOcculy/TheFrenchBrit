@@ -1,5 +1,9 @@
 class ContactsController < ApplicationController
 
+  def show
+    @contact = Contact.find(params[:id])
+  end
+
   def new
     @contact = Contact.new
   end
@@ -11,7 +15,7 @@ class ContactsController < ApplicationController
       redirect_to root_path, flash: {success: 'Your message has been sent !'}
     else
       render :edit
-      flash[:danger] = 'Your message has not been sent !'
+      flash[:warning] = 'Your message has not been sent !'
     end
   end
 

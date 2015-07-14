@@ -19,7 +19,7 @@ class PinsController < ApplicationController
       redirect_to @pin, flash: {success: 'Pin created !'}
     else
       render :new
-      flash[:danger] = 'Pin has not been created !'
+      flash[:warning] = 'Pin has not been created !'
     end
   end
 
@@ -31,7 +31,7 @@ class PinsController < ApplicationController
       redirect_to @pin, flash: {success: 'Pin updated !'}
     else
       render :edit
-      flash[:danger] = 'Pin has not been updated !'
+      flash[:warning] = 'Pin has not been updated !'
     end
   end
 
