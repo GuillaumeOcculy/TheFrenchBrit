@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(http://fonts.googleapis.com/css?family=Niconne|Marck+Script|Tangerine|Great+Vibes|Pinyon+Script|Sacramento);
 
 $body-bg:                                                   #ecf0f1;
 $font-family-sans-serif:                'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -16,4 +17,9 @@ $jumbotron-bg:                                         white;
 
 .navbar-brand {
      font-weight: bold;
+}
+
+.jumbotron h1, .jumbotron .h1{
+  font-family: 'Great Vibes';
+  color: pink;
 }
