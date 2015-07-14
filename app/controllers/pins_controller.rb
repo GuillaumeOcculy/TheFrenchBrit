@@ -27,8 +27,8 @@ class PinsController < ApplicationController
   end
 
   def update
-    if @pin.update(pin_params), flash: {success: 'Pin updated !'}
-      redirect_to @pin
+    if @pin.update(pin_params)
+      redirect_to @pin, flash: {success: 'Pin updated !'}
     else
       render :edit
       flash[:danger] = 'Pin has not been updated !'
