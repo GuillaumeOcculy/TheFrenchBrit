@@ -33,6 +33,9 @@ gem 'sass-rails', '~> 5.0'
 gem 'formtastic-bootstrap'
 
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem 'aws-sdk', '< 2.0'
+
+
 gem 'valid_url'
 gem 'friendly_id', '~> 5.1.0'
 gem 'masonry-rails'
