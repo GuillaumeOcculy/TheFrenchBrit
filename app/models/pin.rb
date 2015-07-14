@@ -3,6 +3,10 @@ class Pin < ActiveRecord::Base
   # Associations
   belongs_to :user
 
+  # FriendlyId
+	extend FriendlyId
+  friendly_id :title, use: :slugged
+
   # Scopes
     scope :recent, -> { order('created_at desc')}
     scope :priority, -> { order('priority asc')}

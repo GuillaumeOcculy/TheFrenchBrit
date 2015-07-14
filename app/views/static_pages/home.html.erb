@@ -21,7 +21,7 @@ THE FRENCH BRIT is an exciting new concept that combines innovation with experie
       <% if pin.is_video? %>
         <iframe width="560" height="315" class="embed-responsive-item" src= <%= pin.video_reference %> ></iframe>
       <% else %>
-        <%= image_tag pin.avatar.url(:medium) %>
+        <%= image_tag pin.avatar.url(:medium), alt: pin.title %>
       <% end %>
     </div>
   <% end %>

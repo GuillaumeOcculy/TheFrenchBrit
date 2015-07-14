@@ -41,7 +41,7 @@ class PinsController < ApplicationController
   private
 
   def find_pin
-    @pin = Pin.find(params[:id])
+    @pin = Pin.friendly.find(params[:id])
   end
 
   def pin_params

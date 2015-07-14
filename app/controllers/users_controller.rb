@@ -1,9 +1,13 @@
 class UsersController < ApplicationController
 
 	before_action :require_no_user, only: [:new, :create]
+	before_action :find_user, only: [:show, :edit, :update]
 
 	def index
 		@users = User.all
+	end
+
+	def show
 	end
 
 	def new
@@ -20,6 +24,12 @@ class UsersController < ApplicationController
 		end
 	end
 
+	def edit
+	end
+
+	def update
+	end
+	
 	def password_forgot
 		if request.post?
 			@user = User.search_by_email_for_authentication(params[:email]).first
@@ -49,6 +59,10 @@ private
 
 	def user_params
 		params.require(:user).permit(:firstname, :lastname, :email, :password)
+	end
+
+	def find_user
+		@user = User.friendly.find(params[:id])
 	end
 
 end
