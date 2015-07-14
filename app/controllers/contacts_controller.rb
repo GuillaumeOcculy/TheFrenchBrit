@@ -1,5 +1,9 @@
 class ContactsController < ApplicationController
 
+  def index
+    @contacts = Contact.recent
+  end
+
   def show
     @contact = Contact.find(params[:id])
   end
@@ -19,9 +23,7 @@ class ContactsController < ApplicationController
     end
   end
 
-  def index
-    @contacts = Contact.all
-  end
+
 
   private
 
