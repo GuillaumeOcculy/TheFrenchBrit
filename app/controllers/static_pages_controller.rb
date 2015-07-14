@@ -4,6 +4,5 @@ class StaticPagesController < ApplicationController
     @partners = Partner.limit(5).priority
   end
 
-  def contact
-  end
+
 end

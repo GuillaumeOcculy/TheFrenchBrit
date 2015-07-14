@@ -18,9 +18,10 @@ class UsersController < ApplicationController
 		@user = User.new(user_params)
 		if @user.save
 			set_current_user(@user)
-			redirect_to root_url
+			redirect_to root_url, flash: {success: 'User account created !'}
 		else
 			render :new
+			flash[:danger] = 'User has not been created !'
 		end
 	end
 
@@ -28,8 +29,14 @@ class UsersController < ApplicationController
 	end
 
 	def update
+		if @user.update(user_params)
+			redirect_to root_url, flash: {success: 'User account updated !'}
+		else
+			render :edit
+			flash[:danger] = 'User has not been updated !'
+		end
 	end
-	
+
 	def password_forgot
 		if request.post?
 			@user = User.search_by_email_for_authentication(params[:email]).first

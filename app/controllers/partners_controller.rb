@@ -15,9 +15,10 @@ class PartnersController < ApplicationController
   def create
     @partner = Partner.new(partner_params)
     if @partner.save
-      redirect_to @partner
+      redirect_to @partner, flash: {success: 'Partner has been created !'}
     else
       render :new
+      flash[:danger] = 'Partner created !'
     end
   end
 
@@ -26,15 +27,16 @@ class PartnersController < ApplicationController
 
   def update
     if @partner.update(partner_params)
-      redirect_to @partner
+      redirect_to @partner, flash: {success: 'Partner has been updated !'}
     else
       render :edit
+      flash[:danger] = 'Partner has not been updated !'
     end
   end
 
   def destroy
     @partner.destroy
-    redirect_to root_path
+    redirect_to root_path, flash: {notice: 'Partner has been deleted !'}
   end
 
   private

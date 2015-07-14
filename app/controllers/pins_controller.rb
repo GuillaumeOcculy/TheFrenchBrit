@@ -16,9 +16,10 @@ class PinsController < ApplicationController
   def create
     @pin = current_user.pins.build(pin_params)
     if @pin.save
-      redirect_to @pin
+      redirect_to @pin, flash: {success: 'Pin created !'}
     else
       render :new
+      flash[:danger] = 'Pin has not been created !'
     end
   end
 
@@ -26,16 +27,17 @@ class PinsController < ApplicationController
   end
 
   def update
-    if @pin.update(pin_params)
+    if @pin.update(pin_params), flash: {success: 'Pin updated !'}
       redirect_to @pin
     else
       render :edit
+      flash[:danger] = 'Pin has not been updated !'
     end
   end
 
   def destroy
     @pin.destroy
-    redirect_to root_path
+    redirect_to root_path, flash: {notice: 'Pin has been deleted !'}
   end
 
   private

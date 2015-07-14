@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  # Static Pages
-  get 'static_pages/home'
-  get 'static_pages/contact'
+  # Contacts
+  resources :contacts, only: [:new, :create, :index]
+  get 'contact' => 'contacts#new'
 
   # Sessions
   get 'login' => 'sessions#new', as: :login
