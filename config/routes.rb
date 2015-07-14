@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'
 
+  # Static Pages
+  get 'static_pages/home'
   get 'static_pages/contact'
 
+  # Sessions
   get 'login' => 'sessions#new', as: :login
   post 'login' => 'sessions#create'
   get 'logout' => 'sessions#destroy', as: :logout
@@ -19,6 +21,7 @@ Rails.application.routes.draw do
   end
 
   resources :pins
+  resources :partners
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

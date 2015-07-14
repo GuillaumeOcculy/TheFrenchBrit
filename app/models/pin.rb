@@ -8,8 +8,8 @@ class Pin < ActiveRecord::Base
   friendly_id :title, use: :slugged
 
   # Scopes
-    scope :recent, -> { order('created_at desc')}
-    scope :priority, -> { order('priority asc')}
+  scope :recent, -> { order('created_at desc')}
+  scope :priority, -> { order('priority asc')}
 
   # Validations
   validates_presence_of :title
@@ -17,9 +17,9 @@ class Pin < ActiveRecord::Base
   validates_presence_of :video_provider,  if: :is_video?
   validates_presence_of :video_reference, if: :is_video?
   validates_presence_of :avatar,          if: :is_image?
-  validates :link, :url => true
+  validates :link, :url => true, presence: false
 
-
+  # Paperclip
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 

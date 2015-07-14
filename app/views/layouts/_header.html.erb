@@ -16,11 +16,13 @@
         <ul class="nav navbar-nav">
           <li><%= link_to 'Accueil', root_path %></li>
           <li><%= link_to 'Castings', pins_path %></li>
+          <li><%= link_to 'Friends', partners_path %></li>
           <li><%= link_to 'Contact', static_pages_contact_path %></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <% if current_user %>
             <li><%= link_to 'New pin', new_pin_path %></li>
+            <li><%= link_to 'New partner', new_partner_path %></li>
             <li><%= link_to current_user.email, current_user %></li>
             <li><%= link_to "logout", logout_path %></li>
           <% end %>

@@ -1,0 +1,9 @@
+<h1 class='text-center'> <%= @partner.name %> </h1>
+
+<div class="row text-center">
+  <div class="col-md-6 col-md-offset-3">
+    <p class='text-center'><%= link_to @partner.link, @partner.link, target: '_blank' %></p>
+    <%= image_tag @partner.avatar.url(:large) %>
+    <%= simple_format(@partner.description) %>
+  </div>
+</div>
