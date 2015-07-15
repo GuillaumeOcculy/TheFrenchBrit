@@ -3,9 +3,6 @@
   <div class="text-center"><%= image_tag partner.avatar.url(:large), alt: partner.name %></div>
 
 <div class="panel-body">
-  <p class='text-center'>
-      <%= link_to partner.name, partner %>
-  </p>
 
   <% if current_user %>
     <div class="actions">
