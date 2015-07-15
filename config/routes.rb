@@ -20,7 +20,8 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :pins
+  get 'castings' => 'pins#index'
+  resources :pins, except: [:index]
   resources :partners
 
   # The priority is based upon order of creation: first created -> highest priority.
