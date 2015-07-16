@@ -31,3 +31,9 @@ $jumbotron-bg:                                         white;
 .navbar-default .navbar-nav > li > a.title{
   color: pink;
 }
+
+.box, .panel-default{
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  border: none;
+}
