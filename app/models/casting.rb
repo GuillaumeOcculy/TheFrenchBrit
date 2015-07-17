@@ -1,4 +1,4 @@
-class Pin < ActiveRecord::Base
+class Casting < ActiveRecord::Base
 
   # Associations
   belongs_to :user

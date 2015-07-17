@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   friendly_id :fullname, use: :slugged
 
 	# Associations
-	has_many :pins
+	has_many :castings
 
 	def fullname
 		[:firstname, :lastname]

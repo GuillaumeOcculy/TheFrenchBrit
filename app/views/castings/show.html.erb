@@ -1,0 +1,15 @@
+<h1 class='text-center'> <%= @casting.title %> </h1>
+
+<div class="row text-center">
+  <div class="col-md-6 col-md-offset-3">
+    <% if @casting.is_video? %>
+      <p class='text-center'><%= link_to @casting.link, @casting.link, target: '_blank' %></p>
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src= <%= @casting.video_reference %>></iframe>
+      </div>
+    <% else %>
+      <%= image_tag @casting.avatar.url(:medium) %>
+    <% end %>
+    <%= simple_format(@casting.description) %>
+  </div>
+</div>

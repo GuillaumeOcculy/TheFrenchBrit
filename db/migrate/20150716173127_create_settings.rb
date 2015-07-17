@@ -10,6 +10,6 @@ class CreateSettings < ActiveRecord::Migration
       t.timestamps null: false
     end
 
-    Setting.create
+    Setting.create(title: 'title', sub_title: 'sub_title', description: 'description', footer_title: 'footer_title', studio_title: 'studio_title', studio_description: 'studio_description')
   end
 end

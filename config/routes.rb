@@ -23,8 +23,8 @@ Rails.application.routes.draw do
     end
   end
 
-  get 'castings' => 'pins#index'
-  resources :pins, except: [:index]
+
+  resources :castings
   resources :partners
 
   match 'settings',         :to => 'settings#edit', :via => :get
