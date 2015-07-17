@@ -10,7 +10,8 @@ module UserAuthentication
 		tokenize :password_token
 
 		validates :email, presence: true, email_format: true, uniqueness: { case_sensitive: false}
-		
+		validates_presence_of :firstname
+		validates_presence_of :lastname
 		before_save :downcase_email
 
 		scope :search_by_email_for_authentication, ->(email = nil) { where(email: email.to_s.downcase).where('password_digest IS NOT NULL') }
