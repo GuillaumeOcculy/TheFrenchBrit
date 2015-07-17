@@ -18,6 +18,9 @@ body{
   p{
     color: black;
   }
+  h1, h2, h3, a{
+    color: $burgundy;
+  }
 }
 .center {
      text-align: center;
