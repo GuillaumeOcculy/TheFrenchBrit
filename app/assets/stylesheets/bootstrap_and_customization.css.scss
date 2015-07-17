@@ -1,20 +1,23 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
-@import url(https://fonts.googleapis.com/css?family=Great+Vibes);
+// @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+// @import url(https://fonts.googleapis.com/css?family=Great+Vibes);
 
 // $body-bg:                                                   #D5E7DA;
-$font-family-sans-serif:                'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+// $font-family-sans-serif:                'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height:                                        45px;
 $navbar-default-bg:                          transparent;
 $navbar-default-brand-color:      #c0392b;
 $brand-primary:                                    #c0392b;
 $jumbotron-bg:                                         transparent;
-$green:                         #D5E7DA;
+$green:                         #006b05;
 $burgundy:                              #730000; //bordeaux
 
 @import 'bootstrap';
 
 body{
-  background-image:linear-gradient(white, $green);
+  background-image:linear-gradient($green, $green);
+  p{
+    color: black;
+  }
 }
 .center {
      text-align: center;
@@ -26,18 +29,21 @@ body{
 
 .jumbotron{
   h1{
-  font-family: 'Great Vibes';
+  // font-family: 'Great Vibes';
   color: $burgundy;
+  }
+  h2{
+    color: #1a005a;
   }
 }
 
-h1, h2{
+h1{
   a{}
   color: $burgundy;
 }
 
 .navbar-default .navbar-nav > li > a{
-  // color: white;
+   color: $burgundy;
 }
 
 .navbar-default .navbar-nav > li > a.title{

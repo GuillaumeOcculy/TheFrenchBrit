@@ -1,8 +1,12 @@
 toolbar:
-  -  bold italic | undo redo
-  -   link
+  -  undo redo bold italic alignleft aligncenter alignright link
+  - textcolor
 plugins:
   - link
+  - textcolor
+
+fontsize_formats: "8pt 9pt 10pt 11pt 12pt 14pt 16pt 26pt 36pt"
+
 font_formats:
   - Andale Mono=andale mono,times
   - Comic Sans MS=comic sans ms,sans-serif
