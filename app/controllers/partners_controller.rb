@@ -1,6 +1,8 @@
 class PartnersController < ApplicationController
-  before_action :find_partner, only: [:show, :edit, :update, :destroy]
 
+  before_action :find_partner, only: [:show, :edit, :update, :destroy]
+  before_action :require_user, except: [:index, :show]
+  
   def index
     @partners = Partner.priority
   end

@@ -16,14 +16,14 @@ module CurrentUser
 
 	def require_user
 		if !current_user
-			redirect_to login_url
+			redirect_to login_url, flash: {warning: 'You need to be logged in !'}
 		end
 	end
-	
+
 	def require_no_user
 		if current_user
 			redirect_to root_url
 		end
-	end	
+	end
 
 end

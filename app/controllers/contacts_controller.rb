@@ -1,5 +1,7 @@
 class ContactsController < ApplicationController
 
+  before_action :require_user, except: [:new, :create]
+
   def index
     @contacts = Contact.recent
   end
@@ -18,7 +20,7 @@ class ContactsController < ApplicationController
       ContactMailer.contact_me(@contact).deliver
       redirect_to root_path, flash: {success: 'Your message has been sent !'}
     else
-      render :edit
+      render :new
       flash[:warning] = 'Your message has not been sent !'
     end
   end

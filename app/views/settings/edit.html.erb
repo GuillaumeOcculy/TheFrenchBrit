@@ -1,0 +1,28 @@
+<h1 class='text-center'> Settings </h1>
+
+
+<%= semantic_form_for @setting, url: settings_update_path, :method => "put" do |f| %>
+  <%= f.semantic_errors %>
+
+  <%= f.inputs name: 'Homepage' do %>
+    <%= f.input :title %>
+    <%= f.input :sub_title %>
+    <%= f.input :description, label: 'Description (should contains 50 words maximum)', input_html: {rows: 3, cols: 3} %>
+  <% end %>
+
+  <%= f.inputs name: 'Studio' do %>
+    <%= f.input :studio_title %>
+    <%= f.input :studio_description, input_html: {rows: 3, cols: 3} %>
+  <% end %>
+
+  <%= f.inputs name: 'Footer' do %>
+    <%= f.input :footer_title %>
+  <% end %>
+
+  <div class="row text-center">
+    <%= f.actions do %>
+      <%= f.submit 'Save', class: 'btn btn-lg btn-primary' %>
+    <% end %>
+  </div>
+
+<% end %>

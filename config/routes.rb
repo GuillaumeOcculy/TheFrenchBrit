@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  # Static_pages
+  get 'studio-for-rent' => 'static_pages#studio'
+
   # Contacts
   resources :contacts, only: [:show, :new, :create, :index]
   get 'contact_us' => 'contacts#new'
@@ -23,6 +26,10 @@ Rails.application.routes.draw do
   get 'castings' => 'pins#index'
   resources :pins, except: [:index]
   resources :partners
+
+  match 'settings',         :to => 'settings#edit', :via => :get
+  match 'settings/update',  :to => 'settings#update', :via => :put
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

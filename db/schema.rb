@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150714115613) do
+ActiveRecord::Schema.define(version: 20150716173127) do
 
   create_table "contacts", force: :cascade do |t|
     t.string   "name"
@@ -71,6 +71,17 @@ ActiveRecord::Schema.define(version: 20150714115613) do
 
   add_index "pins", ["slug"], name: "index_pins_on_slug", unique: true
   add_index "pins", ["user_id"], name: "index_pins_on_user_id"
+
+  create_table "settings", force: :cascade do |t|
+    t.string   "title"
+    t.string   "sub_title"
+    t.text     "description"
+    t.string   "footer_title"
+    t.string   "studio_title"
+    t.text     "studio_description"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string  "firstname"
