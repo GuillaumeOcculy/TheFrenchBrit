@@ -10,9 +10,13 @@ class Pin < ActiveRecord::Base
   # Scopes
   scope :recent, -> { order('created_at desc')}
   scope :priority, -> { order('priority asc')}
+  scope :ads, -> { where(casting_type: 'advertising') }
+  scope :cinemas, -> { where(casting_type: 'cinema') }
+
 
   # Validations
   validates_presence_of :title
+  validates_presence_of :casting_type
   validates_presence_of :media_type
   validates_presence_of :video_provider,  if: :is_video?
   validates_presence_of :video_reference, if: :is_video?

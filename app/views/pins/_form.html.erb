@@ -4,6 +4,7 @@
   <%= f.inputs do %>
     <%= f.input :title %>
     <%= f.input :description, input_html: {rows: 3, cols: 3} %>
+    <%= f.input :casting_type, as: :select, collection: [['Ads, Spots & Shorts', 'advertising'], ['Cinema / TV, Films & Series', 'cinema']], include_blank: false %>
     <%= f.input :link, input_html: {placeholder: 'http://thefrenchbrit.com'} %>
     <%= f.input :media_type, as: :select, collection: [['Video', 'video'], ['Image', 'image']], include_blank: false %>
     <%= f.input :video_provider, as: :select, collection: [['Youtube', 'youtube'], ['Vimeo', 'vimdeo'], ['Canalplus', 'canalplus'], ['Dailymotion', 'dailymotion']], include_blank: false %>

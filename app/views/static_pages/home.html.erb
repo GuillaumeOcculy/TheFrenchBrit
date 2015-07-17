@@ -3,8 +3,19 @@
 <%= render 'home' %>
 
 <h2 class='text-center'> <%= link_to 'Some of what we do', castings_path %> </h2>
-<div id="pins" class="transitions-enabled">
-  <%= render @pins %>
+<div class="row">
+  <div class="col-xs-6">
+    <h2 class='text-center'>Ads, Spots & Shorts</h2>
+    <div id="pins" class="transitions-enabled">
+      <%= render 'pins/pins_ads', pins: @pins_ads %>
+    </div>
+  </div>
+  <div class="col-xs-6">
+    <h2 class='text-center'>Cinema/TV Films & Series</h2>
+    <div id="pins" class="transitions-enabled">
+      <%= render 'pins/pins_cinemas', pins: @pins_cinemas %>
+    </div>
+  </div>
 </div>
 
 <div class="text-center">

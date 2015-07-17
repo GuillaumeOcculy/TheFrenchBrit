@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150716173127) do
+ActiveRecord::Schema.define(version: 20150717195825) do
 
   create_table "contacts", force: :cascade do |t|
     t.string   "name"
@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(version: 20150716173127) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.string   "slug"
+    t.string   "casting_type"
   end
 
   add_index "pins", ["slug"], name: "index_pins_on_slug", unique: true

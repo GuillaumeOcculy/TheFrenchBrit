@@ -4,7 +4,8 @@ class PinsController < ApplicationController
   before_action :require_user, except: [:index, :show]
 
   def index
-    @pins = Pin.all
+    @pins_ads = Pin.ads
+    @pins_cinemas = Pin.cinemas
   end
 
   def show
