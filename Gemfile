@@ -44,6 +44,8 @@ gem 'underscore-rails'
 gem 'gmaps4rails'
 
 gem 'meta-tags'
+gem 'tinymce-rails'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

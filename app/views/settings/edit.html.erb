@@ -1,23 +1,38 @@
+<%= tinymce %>
+
 <h1 class='text-center'> Settings </h1>
 
 
 <%= semantic_form_for @setting, url: settings_update_path, :method => "put" do |f| %>
   <%= f.semantic_errors %>
 
-  <%= f.inputs name: 'Homepage' do %>
-    <%= f.input :title %>
-    <%= f.input :sub_title %>
-    <%= f.input :description, label: 'Description (should contains 50 words maximum)', input_html: {rows: 3, cols: 3} %>
-  <% end %>
+  <!-- Columns are always 50% wide, on mobile and desktop -->
+<div class="row">
+  <div class="col-xs-4">
+    <%= f.inputs name: 'Homepage' do %>
+      <%= f.input :title, as: :text, input_html: {rows: 1, cols: 1, class: 'tinymce'} %>
+      <%= f.input :sub_title, as: :text, input_html: {rows: 1, cols: 1, class: 'tinymce'} %>
+      <%= f.input :description, label: 'Description (should contains 50 words maximum)', input_html: {rows: 3, cols: 3, class: 'tinymce'} %>
+    <% end %>
+  </div>
+  <div class="col-xs-4">
+    <%= f.inputs name: 'Studio page' do %>
+      <%= f.input :studio_title, as: :text, input_html: {rows: 1, cols: 1, class: 'tinymce'} %>
+      <%= f.input :studio_description, input_html: {rows: 3, cols: 3, class: 'tinymce' } %>
+    <% end %>
+  </div>
+  <div class="col-xs-4">
+    <%= f.inputs name: 'Footer' do %>
+      <%= f.input :footer_title, as: :text, input_html: {rows: 1, cols: 1, class: 'tinymce'} %>
+    <% end %>
+  </div>
+</div>
 
-  <%= f.inputs name: 'Studio' do %>
-    <%= f.input :studio_title %>
-    <%= f.input :studio_description, input_html: {rows: 3, cols: 3} %>
-  <% end %>
 
-  <%= f.inputs name: 'Footer' do %>
-    <%= f.input :footer_title %>
-  <% end %>
+
+
+
+
 
   <div class="row text-center">
     <%= f.actions do %>

@@ -1,0 +1,8 @@
+toolbar:
+  -  bold italic | undo redo
+  -   link
+plugins:
+  - link
+font_formats:
+  - Andale Mono=andale mono,times
+  - Comic Sans MS=comic sans ms,sans-serif

@@ -4,4 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include CurrentUser
 
+  def current_setting
+    @setting = Setting.first
+  end
+  helper_method :current_setting
 end

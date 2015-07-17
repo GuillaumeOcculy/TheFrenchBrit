@@ -17,5 +17,7 @@
 //= require turbolinks
 //= require masonry/jquery.masonry
 //= require underscore
+//= require tinymce
+
 //= require gmaps/google
 //= require_tree .
