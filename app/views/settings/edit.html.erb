@@ -3,7 +3,7 @@
 <h1 class='text-center'> Settings </h1>
 
 
-<%= semantic_form_for @setting, url: settings_update_path, :method => "put" do |f| %>
+<%= semantic_form_for current_setting, url: settings_update_path, :method => "put" do |f| %>
   <%= f.semantic_errors %>
 
   <!-- Columns are always 50% wide, on mobile and desktop -->
