@@ -10,6 +10,7 @@ $brand-primary:                                    #c0392b;
 $jumbotron-bg:                                         transparent;
 $green:                         #006b05;
 $burgundy:                              #730000; //bordeaux
+$nprogress-color: $burgundy;
 
 @import 'bootstrap';
 
@@ -59,9 +60,7 @@ h1{
   border: none;
 }
 
-.nprogress-busy, #nprogress{
-  color: $burgundy;
-}
+
 
 /* Set the fixed height of the footer here */
 // footer {
