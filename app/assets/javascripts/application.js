@@ -19,5 +19,8 @@
 //= require underscore
 //= require tinymce
 
+//= require nprogress
+//= require nprogress-turbolinks
+
 //= require gmaps/google
 //= require_tree .

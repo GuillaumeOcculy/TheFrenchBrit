@@ -28,8 +28,6 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'sass-rails', '~> 5.0'
 
 
-
-
 gem 'formtastic-bootstrap'
 
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
@@ -45,6 +43,8 @@ gem 'gmaps4rails'
 
 gem 'meta-tags'
 gem 'tinymce-rails'
+
+gem 'nprogress-rails'
 
 
 # Use ActiveModel has_secure_password
