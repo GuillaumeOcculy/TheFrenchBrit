@@ -1,0 +1,42 @@
+en:
+  meta:
+    # in general you use either prefx or suffix for the title of your page
+    # prefix or suffix are not applied on default title and are both optional
+    prefix: "The French Brit - "
+    suffix: "Casting Director Paris"
+
+    # default meta used if no meta are found for a page
+    default:
+      title: The French Brit - Casting Director Paris
+      description: Casting director paris
+      keywords: "casting, director, paris, rachel desmarest, frenchbrit, thefrenchbrit, the frech brit, suite paris"
+
+    # Another example for the controller home and the action index
+    # full_title is used if exceptionally you don't want to use the prefix or suffix
+    # you can use either title or full_title
+
+    static_pages:
+      home:
+        full_title: The French Brit - Casting Director Paris
+        description: Description of homepage
+
+      studio:
+        full_title: The French Brit | Studio for rent
+        description: Rent a studio in paris
+
+    castings:
+      index:
+        full_title: The French Brit | Castings
+      show:
+        full_title: The French Brit | %{title}
+        # description: %{description}
+
+    contacts:
+      new:
+        full_title: The French Brit | Contact us
+        # description: Description of homepage
+
+    partners:
+      index:
+        full_title: The French Brit | Partners
+        # description: Description of homepage

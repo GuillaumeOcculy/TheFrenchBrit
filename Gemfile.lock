@@ -106,6 +106,7 @@ GEM
       bcrypt (~> 3.1.7)
       jt-rails-tokenizable (~> 1.0)
       validates_email_format_of (~> 1.6)
+    jt-rails-meta (1.0.4)
     jt-rails-tokenizable (1.0.2)
     libv8 (3.16.14.11)
     loofah (2.0.2)
@@ -114,8 +115,6 @@ GEM
       mime-types (>= 1.16, < 3)
     masonry-rails (0.2.4)
       railties
-    meta-tags (2.0.0)
-      actionpack (>= 3.0.0)
     mime-types (2.6.1)
     mimemagic (0.3.0)
     mini_portile (0.6.2)
@@ -222,8 +221,8 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   jt-rails-generator-user (~> 1.0)
+  jt-rails-meta (~> 1.0)
   masonry-rails
-  meta-tags
   nprogress-rails
   paperclip!
   pg

@@ -41,7 +41,8 @@ gem 'masonry-rails'
 gem 'underscore-rails'
 gem 'gmaps4rails'
 
-gem 'meta-tags'
+gem 'jt-rails-meta', '~> 1.0'
+
 gem 'tinymce-rails'
 
 gem 'nprogress-rails'

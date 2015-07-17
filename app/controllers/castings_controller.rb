@@ -9,6 +9,8 @@ class CastingsController < ApplicationController
   end
 
   def show
+    set_meta_title({ title: @casting.title })
+    set_meta_description({ description: @casting.description}) if @casting.description
   end
 
   def new
