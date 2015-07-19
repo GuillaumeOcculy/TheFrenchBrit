@@ -40,7 +40,9 @@ body{
   color: $burgundy;
   font-size: 110px;
   }
-
+  h2{
+    color: yellow;
+  }
   p{
     color: white;
   }
@@ -73,36 +75,10 @@ h1{
   color: white;
 }
 
-
-
 footer{
   p{
-    font-size: 60px;
+    font-size: 50px;
     color: yellow;
   }
   bottom: 0;
 }
-/* Set the fixed height of the footer here */
-// footer {
-//   position: fixed;
-//   bottom: 0;
-//   opacity: .9;
-//   height: 44px;
-//   color: white;
-//   border: 0;
-//   font-family: 'Open Sans',arial,sans-serif !important;
-//   z-index: 9999;
-//   width: 100%;
-//
-//   span.text-muted.text-center{
-//       margin-left: 120px;
-//       color: white;
-//     }
-//
-//     .text-muted a{
-//       color: white;
-//     }
-//     .navbar-right{
-//       color: white;
-//     }
-// }

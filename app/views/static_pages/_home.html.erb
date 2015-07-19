@@ -1,6 +1,6 @@
 <div class="jumbotron center">
-  <h1> <%= current_setting.title.html_safe %> </h1>
-  <h2 class='yellow'> <%= current_setting.sub_title.html_safe %> </h2>
+  <%= current_setting.title.html_safe %>
+  <%= current_setting.sub_title.html_safe %>
   <p><%= current_setting.description.html_safe %> </p>
   <p> <%= link_to "http://www.imdb.com/name/nm0074323/", target: '_blank' do %>
     <%= image_tag 'imdb.png', width: 60, height: 30 %>
