@@ -36,7 +36,7 @@ gem 'aws-sdk', '< 2.0'
 
 gem 'valid_url'
 gem 'friendly_id', '~> 5.1.0'
-# gem 'masonry-rails'
+gem 'masonry-rails'
 
 gem 'underscore-rails'
 gem 'gmaps4rails'
