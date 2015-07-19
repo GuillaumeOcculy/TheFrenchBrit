@@ -6,15 +6,11 @@
 <div class="row">
   <div class="col-xs-6">
     <h2 class='text-center'>Ads, Spots & Shorts</h2>
-    <div class="embed-responsive embed-responsive-4by3">
-      <%= render 'castings/castings_ads', castings: @castings_ads %>
-    </div>
+    <%= render @castings_ads %>
   </div>
   <div class="col-xs-6">
     <h2 class='text-center'>Cinema/TV Films & Series</h2>
-    <div class="embed-responsive embed-responsive-4by3">
-      <%= render 'castings/castings_cinemas', castings: @castings_cinemas %>
-    </div>
+    <%= render @castings_cinemas %>
   </div>
 </div>
 
