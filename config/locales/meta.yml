@@ -8,8 +8,8 @@ en:
     # default meta used if no meta are found for a page
     default:
       title: The French Brit - Casting Director Paris
-      description: Casting director paris
-      keywords: "casting, director, paris, rachel desmarest, frenchbrit, thefrenchbrit, the frech brit, suite paris"
+      description: The international casting & coaching company, major french casting company run by british born parisian based casting director Rachel Desmarest - the biggest casting studios for fiction & advertising in Paris
+      keywords: "casting director paris, casting studio paris, casting suite paris, the french brit, english casting paris, rachel desmarest, french casting director"
 
     # Another example for the controller home and the action index
     # full_title is used if exceptionally you don't want to use the prefix or suffix
