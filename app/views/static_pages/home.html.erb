@@ -2,16 +2,16 @@
 
 <%= render 'home' %>
 
-<h2 class='text-center'> <%= link_to 'Some of what we do', castings_path %> </h2>
+<h2 class='text-center'> <%= link_to 'Some of what we do', castings_path, class: 'white' %> </h2>
 <div class="row">
   <div class="col-xs-6">
-    <h2 class='text-center'>Ads, Spots & Shorts</h2>
+    <h2 class='text-center red'>Ads, Spots & Shorts</h2>
     <div id="castings" class="transitions-enabled">
       <%= render 'castings/castings_ads', castings: @castings_ads %>
     </div>
   </div>
   <div class="col-xs-6">
-    <h2 class='text-center'>Cinema/TV Films & Series</h2>
+    <h2 class='text-center red'>Cinema/TV Films & Series</h2>
     <div id="castings" class="transitions-enabled">
       <%= render 'castings/castings_cinemas', castings: @castings_cinemas %>
     </div>
@@ -19,14 +19,14 @@
 </div>
 
 <div class="text-center">
-  <%= link_to 'See more castings', castings_path %>
+  <%= link_to 'See more castings', castings_path, class: 'red' %>
 </div>
 
-<h2 class='text-center'> <%= link_to 'The French Friends', partners_path %> </h2>
+<h2 class='text-center'> <%= link_to 'The French Friends', partners_path, class: 'white' %> </h2>
 <div id="partners" class="transitions-enabled">
   <%= render @partners %>
 </div>
 
 <div class="text-center">
-  <%= link_to 'See more friends', partners_path %>
+  <%= link_to 'See more friends', partners_path, class: 'red' %>
 </div>
