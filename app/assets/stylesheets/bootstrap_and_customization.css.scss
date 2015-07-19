@@ -14,12 +14,15 @@ $nprogress-color: $burgundy;
 
 @import 'bootstrap';
 
+.yellow{
+  color: yellow;
+}
 body{
   // background-image:linear-gradient($green, $green);
   p{
     color: black;
   }
-  h1, h2, h3, a{
+  h1, h3, a{
     color: $burgundy;
   }
 }
@@ -37,9 +40,7 @@ body{
   color: $burgundy;
   font-size: 110px;
   }
-  h2{
-    color: #1a005a;
-  }
+
   p{
     color: white;
   }
@@ -72,11 +73,14 @@ h1{
   color: white;
 }
 
+
+
 footer{
   p{
-    font-size: 70px;
+    font-size: 60px;
     color: yellow;
   }
+  bottom: 0;
 }
 /* Set the fixed height of the footer here */
 // footer {
