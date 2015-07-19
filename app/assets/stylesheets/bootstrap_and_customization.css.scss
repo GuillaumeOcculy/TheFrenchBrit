@@ -11,11 +11,11 @@ $jumbotron-bg:                                         transparent;
 $green:                         #006b05;
 $burgundy:                              #4D0A0B; //bordeaux
 $nprogress-color: $burgundy;
-
+$yellow:                        #dca928;
 @import 'bootstrap';
 
 .yellow{
-  color: yellow;
+  color: $yellow;
 }
 body{
   // background-image:linear-gradient($green, $green);
@@ -41,7 +41,7 @@ body{
   font-size: 110px;
   }
   h2{
-    color: yellow;
+    color: $yellow;
   }
   p{
     color: white;
@@ -78,7 +78,7 @@ h1{
 footer{
   p{
     font-size: 50px;
-    color: yellow;
+    color: $yellow;
   }
   bottom: 0;
 }
