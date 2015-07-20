@@ -12,7 +12,9 @@ $green:                         #006b05;
 $burgundy:                              #4D0A0B; //bordeaux
 $nprogress-color: $burgundy;
 $yellow:                        #dca928;
+@import "bootstrap-sprockets";
 @import 'bootstrap';
+
 
 .yellow{
   color: $yellow;
