@@ -28,7 +28,9 @@ $pink2: #ffa3a6;
 .pink{
   color: $pink;
 }
-
+.grey{
+  color: #c0c9dd;
+}
 .white{
   color: white;
 }
@@ -60,5 +62,11 @@ html{
   }
   p{
     color: white;
+  }
+}
+
+footer{
+  p{
+    color: #c0c9dd;
   }
 }

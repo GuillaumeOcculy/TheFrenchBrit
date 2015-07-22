@@ -1,7 +1,7 @@
 <div id="wrap">
   <footer id='footer'>
     <div class="container">
-      <p class='text-center yellow'> <%= current_setting.footer_title.html_safe %> </p>
+      <%= simple_format current_setting.footer_title.html_safe %>
     </div>
   </footer>
 </div>
