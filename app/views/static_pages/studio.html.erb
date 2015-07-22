@@ -1,18 +1,32 @@
-<h1 class='text-center'> <%= current_setting.studio_title.html_safe %> </h1>
-
-
 <div class="img">
   <%= image_tag 'background_studio.jpg' %>
 
   <div class="background">
     <div class="container">
-      <%= current_setting.title.html_safe %>
-      <%= current_setting.sub_title.html_safe %>
-      <p><%= current_setting.description.html_safe %> </p>
-      <p> <%= link_to "http://www.imdb.com/name/nm0074323/", target: '_blank' do %>
-        <%= image_tag 'imdb.png', width: 60, height: 30 %>
-        <% end %>
-      <%= render 'layouts/lorem' %>
+      <div class="row top">
+        <div class="col-md-5">
+          <%= image_tag 'studio2.jpg', height: '610' %>
+        </div>
+        <div class="col-md-7">
+          <%= simple_format(current_setting.studio_description.html_safe, class: 'white') %>
+        </div>
+      </div>
+
+      <div class="row top">
+        <div class="col-md-5">
+          <%= image_tag 'studio3.jpg', width: '610',height: '489.375' %>
+        </div>
+        <div class="col-md-7">
+          <%= image_tag 'studio1.jpg' %>
+        </div>
+      </div>
+
+      <div class="row top">
+        <div class="col-md-12">
+          <%= image_tag 'studio4.jpg', width: '1170', height: '610' %>
+        </div>
+      </div>
+
     </div>
   </div>
 
