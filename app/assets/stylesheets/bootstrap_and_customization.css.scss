@@ -1,88 +1,20 @@
 // @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 // @import url(https://fonts.googleapis.com/css?family=Great+Vibes);
 
-$body-bg:                                                   #03150B;
-// $font-family-sans-serif:                'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$body-bg:                                                   #ecf0f1;
+$font-family-sans-serif:                'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height:                                        45px;
-$navbar-default-bg:                          transparent;
+$navbar-default-bg:                          white;
 $navbar-default-brand-color:      #c0392b;
 $brand-primary:                                    #c0392b;
-$jumbotron-bg:                                         transparent;
-$green:                         #006b05;
-$burgundy:                              #4D0A0B; //bordeaux
-$nprogress-color: $burgundy;
-$yellow:                        #dca928;
-@import "bootstrap-sprockets";
+$jumbotron-bg:                                         white;
+
 @import 'bootstrap';
 
-
-.yellow{
-  color: $yellow;
-}
-body{
-  // background-image:linear-gradient($green, $green);
-
-  h1, h3, a{
-    color: $burgundy;
-  }
-}
 .center {
      text-align: center;
 }
 
 .navbar-brand {
      font-weight: bold;
-}
-
-.jumbotron{
-  h1{
-  // font-family: 'Great Vibes';
-  color: $burgundy;
-  font-size: 110px;
-  }
-  h2{
-    color: $yellow;
-  }
-  p{
-    color: white;
-  }
-}
-
-h1{
-  a{}
-  color: $burgundy;
-}
-
-.navbar-default .navbar-nav > li > a{
-   color: $burgundy;
-}
-
-.navbar-default .navbar-nav > li > a.title{
-  color: $burgundy;
-}
-
-.box, .panel-default{
-  background-color: transparent;
-  -webkit-box-shadow: none;
-  border: none;
-}
-
-.red{
-  color: $burgundy;
-}
-
-.white{
-  color: white;
-}
-
-footer{
-  p{
-    font-size: 50px;
-    color: $yellow;
-  }
-  bottom: 0;
-}
-
-.top{
-  margin-top: 10px;
 }
