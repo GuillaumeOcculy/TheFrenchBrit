@@ -1,5 +1,30 @@
-<h1 class='text-center'>(some of) what we do</h1>
+<div class="img">
+  <%= image_tag 'background_home.jpg' %>
 
-<div class="background_casting">
-  <%= render 'layouts/lorem' %>
+  <div class="background">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6">
+          <h1 class='text-center green'>(some of) <br>what we do...</h1>
+          <p>
+            Need a 98 year old granny, fluent in both french and english, qualified in bunny tennis and ready for a shoot in 24 hours? <br><br>
+            No casting is too big or too complicated. We love complicated. <br><br>
+            Contact us, and request your bilingual bunny tennis playing pensionner today.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-6">
+          <h2 class='text-center'>Ads, Spots & Shorts</h2>
+          <%= render @castings_ads %>
+        </div>
+        <div class="col-xs-6">
+          <h2 class='text-center'>Cinema/TV, Films & Series</h2>
+          <%= render  @castings_cinemas %>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
